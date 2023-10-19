@@ -1,22 +1,11 @@
 const mysql = require("mysql2");
 const dotenv = require("dotenv");
 const axios = require('axios');
-const cors = require('cors');
 const express = require('express');
 dotenv.config();
 
 const app = express();
 
-// Middleware for handling CORS using the cors middleware
-const corsOptions = {
-  credentials: true,
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  allowedHeaders: 'Origin, X-Requested-With, Content-Type, Accept, Authorization',
-};
-
-app.use(cors({
-  origin: "https://petrilab.vercel.app/signup"
-}));
 
 // Middleware for parsing JSON requests
 app.use(express.json());
