@@ -25,7 +25,7 @@ export default function Login() {
     // Http.onreadystatechange = (e) => {
     //   console.log(Http.responseText);
     // }
-    fetch('https://repo-node.vercel.app/api/users', {
+    fetch('https://petri-lab.vercel.app/api/users', {
       headers: {
         "Access-Control-Allow-Origin": "localhost:3000"
       }

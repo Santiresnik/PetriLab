@@ -12,7 +12,7 @@ app.use(express.json());
 
 
 // Define a route for the root
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
   res.send("Welcome to Planetscale API PetriLab!");
 });
 
