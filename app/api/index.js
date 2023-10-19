@@ -37,9 +37,9 @@ app.post('/process_image', async (req, res) => {
 });
 
 // Define a catch-all route for 404 errors
-app.use("*", (req, res) => {
-  res.status(404).send("404 - Not Found");
-});
+//app.use("*", (req, res) => {
+//  res.status(404).send("404 - Not Found");
+//});
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
