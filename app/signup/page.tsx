@@ -162,14 +162,16 @@ const Register: React.FC = () => {
         }
       });*/
 
-      const Http = new XMLHttpRequest();
-      const url = 'https://repo-node.vercel.app/api/users';
-      Http.open("GET", url);
-      Http.send();
+      fetch("").then(res=>{
+        if (!res.ok){
+          console.log("Status: "+res.status);
+          return;
+        }
 
-      Http.onreadystatechange = (e) => {
-        console.log(Http.responseText);
-      }
+        return res.json();
+      }).then(data => {
+        
+      })
 
       //alert("request sent (che  ck console)")
 
