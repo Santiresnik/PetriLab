@@ -149,8 +149,8 @@ const Register: React.FC = () => {
         password: password,
       };
 
-      /*superagent
-      .post('https://repo-node.vercel.app/api/users')
+      superagent
+      .post('http://localhost:3000/api/users')
       .send({ name: 'Manny', contra: 'cat', email:"uwu@gmail.com"})
       .set('uyeZVae97zE3syYFB9pboqQGUnQ', 'foobar')
       .set('accept', 'json')
@@ -160,7 +160,7 @@ const Register: React.FC = () => {
         } else {
           console.log("oaudhasiudfnh");
         }
-      });*/
+      });
 
       fetch("").then(res=>{
         if (!res.ok){
