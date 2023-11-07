@@ -5,6 +5,7 @@ import RememberMeCheckbox from "../components/RememberMeCheckbox";
 import BackgroundRight from "../components/bg_right";
 import PasswordInput from "../components/PasswordInput";
 import EmailInput from "../components/EmailInput";
+import { fetchLOGIN } from "../components/fetch";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -17,25 +18,8 @@ export default function Login() {
   
   const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // const Http = new XMLHttpRequest();
-    // const url = 'https://repo-node.vercel.app/api/users';
-    // Http.open("GET", url);
-    // Http.send();
-
-    // Http.onreadystatechange = (e) => {
-    //   console.log(Http.responseText);
-    // }
-    fetch('https://petri-lab.vercel.app/api/users', {
-      headers: {
-        "Access-Control-Allow-Origin": "localhost:3000"
-      }
-    }).then((res) => {
-      return res.json();
-    }).then((data) => {
-      console.log(data);
-    }).catch((err) => {
-      console.log(err);
-    })
+    
+    fetchLOGIN(email, password);
   };
   
 

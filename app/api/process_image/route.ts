@@ -19,11 +19,12 @@ export async function GET(req: Request, { params: { image_url } }: Props) {
     rejectUnauthorized: false, // Disable SSL certificate verification (not recommended for production)
   });*/
   let body = await req.json()
+    image_url = "https://res.cloudinary.com/dso4vg1hw/image/upload/f_auto,q_auto/fknm0eyvz0lzhrrykdwy"
     // let agent = await https.Agent({
     //     rejectUnauthorized: false, 
     //   });
     let result = await axios.post('https://petrilabapi.onrender.com/process_image/', {
-        image_url: imageUrl,
+        imageUrl: image_url,
       }
       , {
       //   httpsAgent: new https.Agent({
