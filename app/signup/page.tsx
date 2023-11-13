@@ -147,11 +147,14 @@ const Register: React.FC = () => {
 
       const userData = {
         name : name,
+        contra: hashString(password),
         email: email,
-        password: hashString(password),
+        
       };
       
-      fetchPOST(userData);
+      fetchPOST(userData, "localhost:300/api/users");
+
+
       
       
       alert("Signed In Successfully!")

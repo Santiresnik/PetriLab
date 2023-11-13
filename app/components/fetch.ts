@@ -1,6 +1,6 @@
 import hashString from "./hasher";
 
-const testDatabase = "https://reqres.in/api/users";
+const testDatabase = "localhost:3000/api/users";//https://reqres.in/api/users";
 
 export function fetchLOGIN(email: string, password: string, name: string=testDatabase) // true logged | false not logged
 {
