@@ -152,7 +152,7 @@ const Register: React.FC = () => {
         
       };
       
-      fetchPOST(userData, "localhost:300/api/users");
+      fetchPOST(userData);
 
 
       
