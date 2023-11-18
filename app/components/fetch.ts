@@ -1,8 +1,8 @@
 import hashString from "./hasher";
 
-const testDatabase = "localhost:3000/api/users";//https://reqres.in/api/users";
+const testDatabase = "http://localhost:3000/api/users";//https://reqres.in/api/users";
 
-export function fetchLOGIN(email: string, password: string, name: string=testDatabase) // true logged | false not logged
+export function fetchLOGIN(email: string, contra: string, name: string=testDatabase) // true logged | false not logged
 {
     fetch(name
     ).then(res => {
@@ -17,7 +17,7 @@ export function fetchLOGIN(email: string, password: string, name: string=testDat
             .then(data => {
                 for (let i = 0; i<data.data.length; ++i){
                 if (data.data[i]["email"] == email) {
-                    if (data.data[i]["password"] == hashString(password)){
+                    if (data.data[i]["contra"] == hashString(contra)){
                         return true;
                     }else{
                     }
