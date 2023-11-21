@@ -16,7 +16,9 @@ export default function Home() {
     <div className={`bg-txtbox_bg_color_2 ${loggedIn ? 'logged-in' : 'anonymous'}`}>
       {loggedIn ? (
         // Content for logged users
-        <Menu/>
+        <div>
+          <Menu/>
+        </div>
       ) : (
         // Content for anonymous users
         <LandingPage/>

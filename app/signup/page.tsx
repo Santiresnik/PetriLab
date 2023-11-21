@@ -147,14 +147,11 @@ const Register: React.FC = () => {
 
       const userData = {
         name : name,
-        contra: hashString(password),
         email: email,
-        
+        password: hashString(password),
       };
       
       fetchPOST(userData);
-
-
       
       
       alert("Signed In Successfully!")
