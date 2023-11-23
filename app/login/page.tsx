@@ -6,6 +6,7 @@ import BackgroundRight from "../components/bg_right";
 import PasswordInput from "../components/PasswordInput";
 import EmailInput from "../components/EmailInput";
 import { fetchLOGIN } from "../components/fetch";
+import LoginBtn from "../components/Loginbtn"
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -62,9 +63,7 @@ export default function Login() {
           </form>
           <form className="w-full max-w-sm">
           <div className="mt-6">
-              <button className="w-full px-4 py-2 flex items-center justify-center text-white bg-red-600 rounded-md hover:bg-red-500 focus:outline-none">
-                Sign In with Google
-              </button>
+              <LoginBtn></LoginBtn>
             </div>
             
             <div className="mt-6">

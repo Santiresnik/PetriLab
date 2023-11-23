@@ -23,6 +23,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/useDarkMode.jsx", "app/components/Sidebar.jsx", "app/_app.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/useDarkMode.jsx", "app/components/Sidebar.jsx", "app/_app.js", "app/api/auth/[...nextauth].js"],
   "exclude": ["node_modules"]
 }
