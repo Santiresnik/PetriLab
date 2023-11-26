@@ -63,22 +63,24 @@ const Navbar: React.FC = () => {
 
 const Sections: React.FC = () => {
 return (
-  <section className="flex-1 mt-2 pb-12">
-  <div className="container mx-auto text-left">
+  <section className="flex-1 mt-2 pb-12 flex items-center justify-center">  
+  <div className="container mx-auto text-left items-center justify-center">
+    <div className="w-1/2 bg-gray-200 rounded-lg pt-8 pb-8 pr-10 m-auto text-center align-middle">
       <h1 className="text-5xl font-semibold mb-2">Welcome to PetriLab</h1>
       <p className="text-gray-600 mb-2">
-      Unlock the secrets of science in the comfort of your lab.
+        Unlock the secrets of science in the comfort of your lab.
       </p>
-      <Link href="/signup">
+      <Link href="/scan">
       <button className="mt-2 px-8 py-4 bg-blue-500 text-white rounded hover:bg-blue-600 transition duration-300 shadow-md">
-          Get Started
+          Scan Now
       </button>
       </Link>
       <p className="mt-4 text-gray-600 text-sm">
-      Start your journey with PetriLab and explore and analyze your dishes.
+        Start your journey with PetriLab and explore and analyze your dishes.
       </p>
+    </div>
 
-      <hr className="border-t-2 border-gray-400 mb-8 mx-auto w-16" />
+      <hr className="border-t-2 border-gray-400 mt-8 mb-8 mx-auto w-16" />
 
       <h2 className="text-3xl font-semibold my-8 text-center">Features</h2>
       <div className="flex flex-col md:flex-row gap-8">
